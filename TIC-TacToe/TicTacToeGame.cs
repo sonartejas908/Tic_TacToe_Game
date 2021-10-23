@@ -8,7 +8,7 @@ namespace TIC_TacToe
     {
 
 
-        public static void GameBoard()
+        public static char[] GameBoard()
         {
 
             char[] board = new char[10];
@@ -17,7 +17,9 @@ namespace TIC_TacToe
             {
                 board[i] = ' ';
             }
+            return board;
         }
+
 
         public static void UserInput()
         {
@@ -35,6 +37,15 @@ namespace TIC_TacToe
                 char player2 = 'X';
                 Console.WriteLine("Player1 is {0} and Player2 is {1}",Player1,player2);
             }
+        }
+
+        public static void DisplayCurrentBoard(char[] board)
+        {
+            Console.WriteLine("{0} |{1} |{2}",board[1],board[2],board[3]);
+            Console.WriteLine("--+--+--");
+            Console.WriteLine("{0} |{1} |{2}",board[4], board[5], board[6]);
+            Console.WriteLine("--+--+--");
+            Console.WriteLine("{0} |{1} |{2}",board[7], board[8], board[9]);
         }
             
     }
